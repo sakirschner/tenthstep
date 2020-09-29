@@ -36,13 +36,16 @@ const NavBar = () => {
         </a>
       </div>
 
-      <div id="nav" className={`${isActive ? "navbar-menu is-active" : "navbar-menu"}`}>
+      <div
+        id="nav"
+        className={`${isActive ? 'navbar-menu is-active' : 'navbar-menu'}`}
+      >
         <div className="navbar-start">
           <Link to="/" className="navbar-item">
             Home
           </Link>
-          <Link to="/NewEntry" className="navbar-item">
-            New Entry
+          <Link to="/Create" className="navbar-item">
+            Create Form
           </Link>
         </div>
 

@@ -2,21 +2,22 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const Inputs = ({ idx, promptState, handlePromptChange }) => {
-  const labelId = `label-${idx}`;
-  const fieldId = `field-${idx}`;
+  const promptId = `prompt-${idx}`;
+  // const fieldId = `field-${idx}`;
   return (
-    <div key={`label-${idx}`}>
-      <label htmlFor={labelId}>{`Label #${idx + 1}`}</label>
+    <div key={`prompt-${idx}`}>
+      <label htmlFor={promptId}>{`Prompt #${idx + 1}`}</label>
       <input
         type="text"
-        name={labelId}
+        title="prompt"
+        name={promptId}
         data-idx={idx}
-        id={labelId}
+        id={promptId}
         className="input"
-        value={promptState[idx].label}
+        value={promptState[idx].prompt}
         onChange={handlePromptChange}
       />
-      <label htmlFor={fieldId}>Field</label>
+      {/* <label htmlFor={fieldId}>Field</label>
       <textarea
         name={fieldId}
         data-idx={idx}
@@ -24,7 +25,7 @@ const Inputs = ({ idx, promptState, handlePromptChange }) => {
         value={promptState[idx].field}
         onChange={handlePromptChange}
         className="textarea"
-      />
+      /> */}
     </div>
   );
 };
